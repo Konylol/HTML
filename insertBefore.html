@@ -1,0 +1,12 @@
+<h1>W "div" dodajemy "p" i przed niego wstawiamy "span"</h1>
+<script>
+        //"<div></div>"
+    let container = document.querySelector("div");
+    let p = document.createElement("p");
+        //"<div><p></p></div>"
+    container.appendChild(p);
+    let span = document.createElement("span");
+    p.before(span); //span jest teraz przed p
+    console.log(container.innerHTML);
+        // "<div><span></span><p></p></div>"
+</script>
