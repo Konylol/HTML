@@ -1,0 +1,30 @@
+<h1>Podmiana tekstu po kliknieciu</h1>
+<p onclick="this.innerHTML='mowy tekst'">Kliknij mnie</p>
+
+<h1 onclick="changeText(this);">
+    Kliknij mnie
+</h1>
+<script>
+function changeText(id) {
+    id.innerHTML = "mowy tekst";
+}
+</script>
+
+<button id="myButton">Wyświetl datę</button>
+<p id="demo"></p>
+<script>
+    document.querySelector('#myButton').oneclick=displayData;
+    function displayData() {
+        document.querySelector('#demo').innerHTML = Date();
+    }
+</script>
+
+<p>Wypisz swoje imię </p>
+<input type="text" id="myInput" oninput="displayName(this.value)">
+<p>Imię</p>
+<p id="nameBox" style="border: 2px solid black; padding: 5px; width: 100px; display: inline-block;"></p>
+<script>
+    function displayName(name) {
+        document.querySelector('#nameBox').innerHTML = name;
+    }
+</script>
