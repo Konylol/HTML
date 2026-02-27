@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Wyrażenia regularne</title>
+</head>
+<body>
+
+<p>Wyszukiwanie tekstu 'być'</p>
+
+<script>
+    let tekst="Być albo nie być";
+    var wzorzec=/być/i;
+    var pozycja = tekst.search(wzorzec);
+    document.write("Pozycja szukanego tekstu: " + pozycja);
+</script>
+
+<p>Zamiana strony internetowej</p>
+
+<script>
+    let tekst = "Visit Microsoft!";
+    let result = tekst.replace("Microsoft", "W3Schools");
+    document.write(result);
+</script>
+
+<p>Wyszukiwanie nr telefonu</p>
+
+<script>
+    let tekst = "tel. 703114567";
+    var telefon = /\d{9}/;
+    var pozycja = tekst.search(telefon);
+    document.write("Cyfry znaleziona na pozycji: " + pozycja);
+</script>
+
+<p>Wyszukiwanie kodu pocztowego</p>
+
+<script>
+    let tekst = "34-200 Sucha Beskidzka";
+    var kod_pocztowy = /\d{2}-\d{3}/;
+    var pozycja = tekst.search(kod_pocztowy);
+    document.write(tekst.slice(pozycja,pozycja +6));
+</script>
+
+</body>
+</html>
